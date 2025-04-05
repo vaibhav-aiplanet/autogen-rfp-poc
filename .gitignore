@@ -2,3 +2,5 @@
 .env
 studio
 *.pdf
+
+**/__pycache__/

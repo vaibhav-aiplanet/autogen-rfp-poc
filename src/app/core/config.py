@@ -20,10 +20,12 @@ class Config(BaseSettings):
     WEAVIATE_API_KEY: str
     TOP_K: int
 
+    AZURE_API_KEY: str
     AZURE_OPENAI_DEPLOYMENT: str
     AZURE_OPENAI_ENDPOINT: str
     AZURE_OPENAI_EMBEDDINGS_API_KEY: str
     AZURE_OPENAI_API_VERSION: str
+    AZURE_MODEL_NAME: str
 
     COHERE_MODEL_ID: str
     HUGGINGFACE_API_KEY: str
@@ -33,10 +35,15 @@ class Config(BaseSettings):
 
     TAVILY: str
 
+    CHUNK_SIZE: int = 1000
+    CHUNK_OVERLAP: int = 200
+    LLAMA_CLOUD_API_KEY: str = "lskdfj"
+
     model_config = SettingsConfigDict(
         env_file=Path.cwd() / ".env",
         case_sensitive=True,
         from_attributes=True,
+        extra="allow",
     )
 
 

@@ -2,8 +2,13 @@ from dataclasses import dataclass
 
 import instructor
 import openai
-from autogen_core import (DefaultTopicId, MessageContext, RoutedAgent,
-                          default_subscription, message_handler)
+from autogen_core import (
+    DefaultTopicId,
+    MessageContext,
+    RoutedAgent,
+    default_subscription,
+    message_handler,
+)
 from pydantic import BaseModel
 
 

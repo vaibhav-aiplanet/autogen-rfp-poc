@@ -1,8 +1,13 @@
 from dataclasses import dataclass
 from typing import Callable
 
-from autogen_core import (DefaultTopicId, MessageContext, RoutedAgent,
-                          default_subscription, message_handler)
+from autogen_core import (
+    DefaultTopicId,
+    MessageContext,
+    RoutedAgent,
+    default_subscription,
+    message_handler,
+)
 
 
 @dataclass

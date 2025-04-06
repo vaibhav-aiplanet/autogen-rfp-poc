@@ -2,12 +2,16 @@ import asyncio
 from dataclasses import dataclass
 from typing import List
 
-from autogen_core import (AgentId, MessageContext, RoutedAgent,
-                          SingleThreadedAgentRuntime, message_handler)
-from autogen_core.models import (ChatCompletionClient, SystemMessage,
-                                 UserMessage)
+from autogen_core import (
+    AgentId,
+    MessageContext,
+    RoutedAgent,
+    SingleThreadedAgentRuntime,
+    message_handler,
+)
+from autogen_core.models import ChatCompletionClient, SystemMessage, UserMessage
 
-from app.llm import get_llm_client
+from app.core.llm import get_llm_client
 
 
 @dataclass

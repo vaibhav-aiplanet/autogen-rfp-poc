@@ -12,7 +12,7 @@ from autogen_core.models import (AssistantMessage, ChatCompletionClient,
 from autogen_core.tools import FunctionTool, Tool
 from pydantic import BaseModel
 
-from app.llm import get_llm_client
+from app.core.llm import get_llm_client
 
 
 class UserLogin(BaseModel):

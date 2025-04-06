@@ -1,11 +1,19 @@
 import asyncio
 from dataclasses import dataclass
 
-from autogen_core import (AgentId, ClosureAgent, ClosureContext,
-                          DefaultTopicId, MessageContext, RoutedAgent,
-                          SingleThreadedAgentRuntime, TopicId,
-                          TypeSubscription, default_subscription,
-                          message_handler, type_subscription)
+from autogen_core import (
+    ClosureAgent,
+    ClosureContext,
+    DefaultTopicId,
+    MessageContext,
+    RoutedAgent,
+    SingleThreadedAgentRuntime,
+    TopicId,
+    TypeSubscription,
+    default_subscription,
+    message_handler,
+    type_subscription,
+)
 
 
 @dataclass

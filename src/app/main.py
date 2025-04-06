@@ -1,7 +1,9 @@
 import asyncio
 
-from app.examples.group_chat import main as func
-from app.llm_tracker import track_llm
+from app.core.llm_tracker import track_llm
+
+# from app.examples.group_chat import main as func
+from app.rfp.main import main as func
 
 
 @track_llm

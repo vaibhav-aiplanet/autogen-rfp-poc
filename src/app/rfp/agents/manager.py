@@ -94,6 +94,14 @@ class ManagerAgent(RoutedAgent):
         self.results.expectations = message.expectations
         self.results.problem_statement = message.problem_statement
 
+        if self.results.sections:
+            print("Publishing results")
+            await self.publish_message(
+                self.results,
+                TopicId("results", ctx.topic_id.source),
+                cancellation_token=ctx.cancellation_token,
+            )
+
         # TODO: save the results to db
 
     @message_handler
@@ -106,3 +114,11 @@ class ManagerAgent(RoutedAgent):
 
         self.results.sections = message.sections
         print("Sections generated")
+
+        if self.results.requirements:
+            print("Publishing results")
+            await self.publish_message(
+                self.results,
+                TopicId("results", ctx.topic_id.source),
+                cancellation_token=ctx.cancellation_token,
+            )
